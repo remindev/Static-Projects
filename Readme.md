@@ -1,6 +1,6 @@
 # Static-pages
 
-**Static wesites, clones and recreations**
+**Static wesites - Projects, clones and recreations**
 
 **Features**
 * Each folder is each project
