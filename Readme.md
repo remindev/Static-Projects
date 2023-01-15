@@ -23,5 +23,6 @@
 - [ROG-Clone](https://remindev.github.io/Static-Projects/ROG-Clone/)
 
 **Usage**   
-You can use any of the project for free the best way to do it is to clone this repository.
-Feel free to explore, I hove you get some value from these works of mine.
+You can use any of the projects for free. The best way to do it is to clone this repository.
+Feel free to explore, I hope you get some value from these works of mine.
+
