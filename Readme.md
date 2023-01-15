@@ -13,14 +13,14 @@
 - Hosted link is provide to all availabe projects
 
 **Links**
-- [3D-House](https://remindev.github.io/Static-Projects/3D-House)
-- [Adobe-Clone](https://remindev.github.io/Static-Projects/Adobe-Clone/)
-- [AMD-Clone](https://remindev.github.io/Static-Projects/AMD-Clone/)
-- [DocTube-Youtube](https://remindev.github.io/Static-Projects/DocTube-Youtube/)
-- [Landex-Clone](https://remindev.github.io/Static-Projects/Landex-Clone/)
-- [Puzzle-Game](https://remindev.github.io/Static-Projects/Puzzle-Game)
-- [Reflex-Game](https://remindev.github.io/Static-Projects/Reflex-Game)
-- [ROG-Clone](https://remindev.github.io/Static-Projects/ROG-Clone/)
+- [3D-House](https://remintroy.github.io/static-projects/3D-House)
+- [Adobe-Clone](https://remintroy.github.io/static-projects/Adobe-Clone/)
+- [AMD-Clone](https://remintroy.github.io/static-projects/AMD-Clone/)
+- [DocTube-Youtube](https://remintroy.github.io/static-projects/DocTube-Youtube/)
+- [Landex-Clone](https://remintroy.github.io/static-projects/Landex-Clone/)
+- [Puzzle-Game](https://remintroy.github.io/static-projects/Puzzle-Game)
+- [Reflex-Game](https://remintroy.github.io/static-projects/Reflex-Game)
+- [ROG-Clone](https://remintroy.github.io/static-projects/ROG-Clone/)
 
 **Usage**   
 You can use any of the projects for free. The best way to do it is to clone this repository.
