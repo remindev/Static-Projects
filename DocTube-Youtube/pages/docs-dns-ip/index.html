@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS</title>
+    <link rel="stylesheet" href="/DocTube-Youtube/style.css">
+    <link rel="stylesheet" href="/DocTube-Youtube/pages/style.css">
+    <link rel="shortcut icon" href="/DocTube-Youtube/res/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="home-title">
+        <div class="left" onclick="window.location.href='/DocTube-Youtube/'">
+            <img src="/DocTube-Youtube/res/menu.svg" onclick="myApp.sidebar.open()" class="inverted" alt="Sidebar toggle icn" title="Menu">
+            <img src="/DocTube-Youtube/res/logo.png" alt="Logo img" title="Home">
+            <span>DocTube <sup style="font-size: 10px; color:rgb(207, 207, 207);">in</sup></span>
+        </div>
+        <div class="middle">
+            <input type="text" placeholder="Search">
+            <div class="img-cont" title="Search">
+                <img src="/DocTube-Youtube/res/search.svg" class="inverted" alt="search image" >
+            </div>
+            <div class="voice-icn" title="Search with your voice">
+                <img src="/DocTube-Youtube/res/mic.svg" class="inverted" alt="voice search icn">
+            </div>
+        </div>
+        <div class="right">
+            <img src="/DocTube-Youtube/res/video-create.svg" class="inverted" alt="create icn" title="Create video">
+            <img src="/DocTube-Youtube/res/notification.svg" class="inverted" alt="notification icn" title="Notifications">
+            <img src="/DocTube-Youtube/res/pp.jpg" alt="Profile image" title="Menu" class="menu">
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="title-cont">
+            <h2>How a DNS Server (Domain Name System) works ?</h2>
+        </div>
+
+        <br>
+        <div class="video-embed">
+            <iframe 
+                src="https://www.youtube.com/embed/mpQZVYPuDGU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <br>
+        <p>
+            DNS, or the Domain Name System, translates human readable domain names (for example, www.amazon.com) 
+            to machine readable IP addresses (for example, 192.0.2.44).
+        </p>
+      
+        <br>
+        <p>
+            All computers on the Internet, from your smart phone or laptop to the servers that serve content for massive retail websites, 
+            find and communicate with one another by using numbers. 
+            These numbers are known as IP addresses. When you open a web browser and go to a website, 
+            you don't have to remember and enter a long number. 
+            Instead, you can enter a domain name like example.com and still end up in the right place.
+            <br><br>
+            DNS servers translate requests for names into IP addresses, 
+            controlling which server an end user will reach when they type a domain name into their web browser. 
+            These requests are called queries.
+        </p>
+        <br>
+
+        <div class="creative-box you">
+            
+            <img src="/DocTube-Youtube/pages/res/note.svg">
+            <span>Did you Know : Every time you Google <strong>DNS</strong> server gives you Googles ip address</span>
+        </div>
+        <br>
+        <div class="title-cont">
+            <h4>Types of DNS Service</h4>
+        </div>
+
+        <br>
+        <p>
+            <strong>Authoritative DNS:</strong> An authoritative DNS service provides an update mechanism that developers use to manage their public DNS names. 
+            It then answers DNS queries, translating domain names into IP address so computers can communicate with each other. 
+            Authoritative DNS has the final authority over a domain and is responsible for providing answers to recursive DNS servers with the IP address information. 
+            Amazon Route 53 is an authoritative DNS system.
+            <br><br>
+            <strong>Recursive DNS:</strong> Clients typically do not make queries directly to authoritative DNS services. 
+            Instead, they generally connect to another type of DNS service known a resolver, or a recursive DNS service. 
+            A recursive DNS service acts like a hotel concierge: while it doesn't own any DNS records, 
+            it acts as an intermediary who can get the DNS information on your behalf. 
+            If a recursive DNS has the DNS reference cached, or stored for a period of time, 
+            then it answers the DNS query by providing the source or IP information. 
+            If not, it passes the query to one or more authoritative DNS servers to find the information.
+            
+        </p>
+        <br>
+
+        <div class="creative-box note" >
+            <span>NOTE&nbsp;:&nbsp; DNS dosn't give webpages of domain we typed</span>
+        </div>
+        <br>
+
+        <div class="creative-box note" >
+            <span>NOTE&nbsp;:&nbsp; Every time you request to a server with domain name DNS plays a major role of giving ip address of our destination.
+            </span>
+        </div>
+        <br>
+
+        <br>
+        <div class="title-cont">
+            <h4>How Does DNS Route Traffic To Your Web Application?</h4>
+        </div>
+
+        <div class="img-cont">
+            <img src="/DocTube-Youtube/pages/res/Dns-img.png">
+        </div>
+        <br>
+
+        <p>
+            The Above diagram gives an overview of how recursive and authoritative DNS services work together to route an end user to your website or application.
+            <br><br>
+            <ul class="num">
+                <li>A user opens a web browser, enters www.example.com in the address bar, and presses Enter.</li>
+                <li>The request for www.example.com is routed to a DNS resolver, which is typically managed by the user's Internet service provider (ISP), such as a cable Internet provider, a DSL broadband provider, or a corporate network.</li>
+                <li>The DNS resolver for the ISP forwards the request for www.example.com to a DNS root name server.</li>
+                <li>The DNS resolver for the ISP forwards the request for www.example.com again, this time to one of the TLD name servers for .com domains. The name server for .com domains responds to the request with the names of the four Amazon Route 53 name servers that are associated with the example.com domain.</li>
+                <li>The DNS resolver for the ISP chooses an Amazon Route 53 name server and forwards the request for www.example.com to that name server.</li>
+                <li>The Amazon Route 53 name server looks in the example.com hosted zone for the www.example.com record, gets the associated value, such as the IP address for a web server, 192.0.2.44, and returns the IP address to the DNS resolver.</li>
+                <li>The DNS resolver for the ISP finally has the IP address that the user needs. The resolver returns that value to the web browser. The DNS resolver also caches (stores) the IP address for example.com for an amount of time that you specify so that it can respond more quickly the next time someone browses to example.com. For more information, see time to live (TTL).</li>
+                <li>The web browser sends a request for www.example.com to the IP address that it got from the DNS resolver. This is where your content is, for example, a web server running on an Amazon EC2 instance or an Amazon S3 bucket that's configured as a website endpoint.</li>
+                <li>The web server or other resource at 192.0.2.44 returns the web page for www.example.com to the web browser, and the web browser displays the page.</li>
+            </ul>
+        </p>
+        <br>
+        <div class="img-cont">
+            <img src="/DocTube-Youtube/pages//res/dns-img-2.png">
+        </div>
+        <br>
+        <p>
+            When you enter a URL into your browser, it starts searching for the corresponding IP-address in your computer's DNS cache. 
+            If it finds no information there, the request will be redirected until the IP address will be identified. 
+            Thereby it passes the local DNS-Server (usually your internet router), the ISP’s DNS-Server, and the root name server, 
+            which is accountable for the respective Top Level Domain (TLD). If there is still no information found, 
+            the request will be sent to the Network Information Center (NIC) responsible for the zone. 
+            In the case of the TLD “.com”, this is Verisign.
+        </p>
+        <br>
+        <div class="title-cont">
+            <h4>DNS server requirements</h4>
+        </div>
+
+        <p>DNS servers typically do not verify if received information and data are accurate or from a legitimate source. 
+            This is because the domain name system still functions the way it did in the early days of the internet. 
+            At that time, only universities and research centers used this system, 
+            so there was no reason to believe that anyone would spread fake DNS information. 
+            Today, hackers use this lack of verification to infiltrate fake data, obtain confidential information, 
+            or redirect users to other servers using methods such as DNS spoofing, cache poisoning, 
+            or man-in-the-middle attacks. For this reason, the security requirements for DNS servers have increased significantly.
+        </p>
+        <br>
+        <p>
+            Protective measures such as DNSSEC (Domain Name System Security Extensions) can increase the security of DNS servers. 
+            Similar to SSL/TLS, these extensions use encryption with public keys. 
+            Furthermore, DNS based authentication of named entities, abbreviated DANE, 
+            offers a collection of protocols for the secure authentication of users.
+        </p>
+        <br>
+        <div class="creative-box note">
+            <img src="/DocTube-Youtube/pages/res/note.svg">
+            <span>NOTE: DNS servers resolve IP-address curresponding to the domain names</span>
+        </div>
+       
+        
+        <div class="feedback">
+            Does the Documentation help you ?
+            <Button>Yes</Button>
+            <button>No</button>
+        </div>
+
+    </div>
+    
+
+    <footer>
+        Yay, Look like you reach the End : &#169; 2022
+    </footer>
+
+</body>
+</html>
